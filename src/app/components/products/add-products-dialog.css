@@ -1,0 +1,26 @@
+.table {
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+  padding: 2vh 3vw !important;
+}
+
+.hardTable {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.quantity,
+.color,
+.size {
+  width: 33.33%;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 2vh 3vw;
+}
+
+::ng-deep .mat-form-field-infix {
+  width: unset !important;
+}

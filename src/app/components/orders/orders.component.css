@@ -1,0 +1,17 @@
+.table {
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+  padding: 2vh 3vw !important;
+}
+
+.orders {
+  padding: 14vh 0;
+}
+
+.heading {
+  font-size: 1.6em;
+}

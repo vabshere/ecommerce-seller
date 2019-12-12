@@ -1,0 +1,27 @@
+<div
+  class="returns"
+  fxLayout="column"
+  fxLayoutGap="5vh"
+  fxLayoutAlign="center center"
+>
+  <div class="return-card" *ngFor="let return of returns; let i = index">
+    <mat-card class="card">
+      <mat-card-header>
+        <div
+          mat-card-avatar
+          class="header-image"
+          [style.background-image]="'url(' + return.image + ')'"
+        ></div>
+        <mat-card-title>{{ return.name }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p><b>Reason:</b> {{ return.reason }}</p>
+        <p *ngIf="return.comment"><b>Comment:</b> {{ return.comment }}</p>
+      </mat-card-content>
+      <!-- <mat-card-actions>
+        <button mat-button (click)="approve(i)">Approve</button>
+        <button mat-button (click)="reject(i)">Reject</button>
+      </mat-card-actions> -->
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<h1 mat-dialog-title>Replenish Product</h1>
+<div mat-dialog-content>
+  <div class="hardTable">
+    <div class="row">
+      <div class="cell" fxLayout>
+        <div class="color">Color</div>
+        <div class="size">Size</div>
+        <div class="quantity">Quantity</div>
+      </div>
+    </div>
+    <div class="row" *ngFor="let color of object(data.quantity); let i = index">
+      <div
+        class="cell"
+        *ngFor="let size of object(data.quantity[color]); let j = index"
+        fxLayout
+      >
+        <div class="color">{{color}}</div>
+        <div class="size">{{size}}</div>
+        <div class="quantity">
+          <mat-form-field>
+            <input
+              [id]="'quantity' + i + j"
+              [name]="'quantity' + i + j"
+              matInput
+              placeholder="Quantity"
+              type="number"
+              [(ngModel)]="data.quantity[color][size]"
+            />
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>
+    Update
+  </button>
+</div>

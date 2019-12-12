@@ -1,0 +1,12 @@
+.header-image {
+  background-size: cover;
+}
+
+.returns {
+  padding: 4vh;
+  background: #eee;
+}
+
+.return-card {
+  width: 60%;
+}

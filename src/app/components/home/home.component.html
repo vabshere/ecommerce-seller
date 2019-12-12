@@ -1,0 +1,17 @@
+<mat-sidenav-container class="_sidenav">
+  <mat-sidenav #sidenav mode="side" class="_side" opened>
+    <mat-nav-list fxLayout="column">
+      <a
+        mat-list-item
+        class="navigation"
+        *ngFor="let link of links"
+        routerLink="{{ link.id }}"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        {{ link.name }}
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <router-outlet></router-outlet>
+</mat-sidenav-container>
